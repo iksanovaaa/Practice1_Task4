@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Task4
 {
@@ -62,11 +58,11 @@ namespace Task4
             for (int i = n; i > 0; i--)
             {
                 Complex mult1 = Complex.Create(a[i], b[i]);
-                Complex mult2 = Complex.Pow(complXY, n);
-                res = Complex.Subtract(res, Complex.Multiplication(mult1, mult2));
+                Complex mult2 = Complex.Pow(complXY, i);
+                res = Complex.Sum(res, Complex.Multiplication(mult1, mult2));
             }
             Complex tmp = Complex.Create(a[0], b[0]);
-            res = Complex.Subtract(res, tmp);
+            res = Complex.Sum(res, tmp);
             return res;
         }
         //выход из программы или формирование новой последоватльности
@@ -85,5 +81,4 @@ namespace Task4
             return end;
         }
     }
-
 }

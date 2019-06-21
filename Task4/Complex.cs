@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Task4
 {
@@ -32,8 +28,8 @@ namespace Task4
         public static Complex Multiplication(Complex a, Complex b)
         {
             Complex res = new Complex();
-            res.r = a.r * b.r;
-            res.i = a.i * b.i;
+            res.r = a.r * b.r - a.i * b.i;
+            res.i = a.r * b.i + a.i * b.r;
             return res;
         }
         
@@ -41,20 +37,12 @@ namespace Task4
         public static Complex Pow(Complex a, int n)
         {
             Complex res = new Complex();
-            for (int i = 0; i < n; i++)
+            res.r = a.r;
+            res.i = a.i;
+            for (int i = 1; i < n; i++)
             {
-                res.r = a.r * a.r;
-                res.i = a.i * a.i;
+                res = Multiplication(res, a);
             }
-            return res;
-        }
-
-        //вычитание комплексных чисел
-        public static Complex Subtract(Complex a, Complex b)
-        {
-            Complex res = new Complex();
-            res.r = a.r - b.r;
-            res.i = a.i - b.i;
             return res;
         }
 
