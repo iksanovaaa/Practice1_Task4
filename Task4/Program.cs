@@ -2,14 +2,14 @@
 
 namespace Task4
 {
-    class Program
+    public class Program
     {
-        static Random rnd = new Random();
-        static double[] a, b;
-        static int n;
-        static double x, y;
-        static Complex complXY;
-        static void Main(string[] args)
+        public static Random rnd = new Random();
+        public static double[] a, b;
+        public static int n;
+        public static double x, y;
+        public static Complex complXY;
+        public static void Main(string[] args)
         {
             bool end = false;
             do
@@ -52,7 +52,7 @@ namespace Task4
         }
 
         //вычисление значения многочлена по схеме Горнера
-        static Complex Gorner()
+        public static Complex Gorner()
         {
             Complex res = Complex.Create(0, 0);
             for (int i = n; i > 0; i--)

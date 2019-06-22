@@ -2,7 +2,7 @@
 
 namespace Task4
 {
-    class Complex  //класс для работы с комплексными числами
+    public class Complex  //класс для работы с комплексными числами
     {
         public double r, i; //действительная и мнимая части
 
